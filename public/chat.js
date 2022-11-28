@@ -23,14 +23,16 @@ const message = document.getElementById('message').addEventListener('keypress', 
     }
 })
 
-const root = document.getElementById('root')
+
 socket.on('message', (data) => {
+
     console.log(data)
     createMessage(data)
 })
 
 
 function createMessage(data){
+    const root = document.getElementById('root')
     
     root.innerHTML += `<h1>${data.text}<h1>`
 }
