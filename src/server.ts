@@ -1,7 +1,6 @@
-import express from "express";
-import http from "http"
+import { serverHttp } from "./http";
+import "./socket"
 
-const App = express();
-
-
-
+serverHttp.listen(4000, () => {
+    console.log('server is running on port 4000')
+})
